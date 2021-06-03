@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CadastroDeSeries.Classes;
+using System;
 
 namespace CadastroDeSeries
 {
@@ -6,7 +7,15 @@ namespace CadastroDeSeries
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SeriesMenu seriesMenu = new SeriesMenu();
+
+            while(true)
+            {
+                seriesMenu.imprimirMenu();
+                var opcao = Console.ReadLine();
+                seriesMenu.selecionarOpcaoMenu(opcao);
+            }
+
         }
     }
 }
